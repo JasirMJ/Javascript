@@ -1,0 +1,87 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="calculator.js" >
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="calculator.css">
+
+
+
+<form id="calc" >
+<div class="box" align="center">
+<div class="display">
+<p>Interactive Calculator</p>
+</div>
+<div >
+
+
+    <table border=1 >
+        <tr><td class="heading" colspan=4>...</td></tr>
+        <tr>
+            <td colspan=4>
+                    <input type="text" class="screen   "
+    onkeypress='return event.charCode >= 48 && event.charCode <= 57 
+    || event.charCode == 37 
+    || event.charCode == 42 
+    || event.charCode == 43
+    || event.charCode == 45 
+    || event.charCode == 46 
+    || event.charCode == 47 
+    || event.charCode == 13 keyispressed(event) '
+     size="18" id="d" >
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan=4 >
+                <input class="functionDisplay" id="Fn" type="text" readonly   >
+            </td>
+            
+        </tr>
+        
+        <tr>
+            <td><input class = "common row1" type="button" value="C" onclick='clr()' ></td>
+            <td><input class = "common row1" id="backspace" type="button" value="CE" ></td>
+            <td><input class = "common row1" id="square" type="button" value="x2" ></td>
+            <td><input class = "common row1" id="factorial" type="button" onclick="GetFactorial(d.value)" value="x!" ></td>
+        </tr>
+        <tr>
+            <td><input class = "common row2" id="sin" type="button" value="sin" ></td>
+            <td><input class = "common row2" id="log" type="button" value="log" ></td>
+            <td><input class = "common row2" type="button" value="mod" onclick='Number("%")' ></td>
+            <td><input class = "common row2" type="button" value="/" onclick='Number("/")'></td>
+            
+        </tr>
+        <tr>
+            <td><input class = "common num" type="button" value="7" onclick='Number("7")'></td>
+            <td><input class = "common num " type="button" value="8" onclick='Number("8")'></td>
+            <td><input class = "common num" type="button" value="9" onclick='Number("9")'></td>
+            <td><input class = "common star" type="button" value="*" onclick='Number("*")'></td>
+        </tr>
+        <tr>
+            <td><input class = "common num" type="button" value="4" onclick='Number("4")'></td>
+            <td><input class = "common num" type="button" value="5" onclick='Number("5")'></td>
+            <td><input class = "common num" type="button" value="6" onclick='Number("6")'></td>
+            <td><input class = "common minus" type="button" value="-" onclick='Number("-")'></td>
+        </tr>
+        <tr >
+            <td><input class = "common num" type="button" value="1" onclick='Number("1")'></td>
+            <td><input class = "common num" type="button" value="2" onclick='Number("2")'></td>
+            <td><input class = "common num" type="button" value="3" onclick='Number("3")'></td>
+            <td rowspan=2><input class="plus" type="button" value="+" onclick='Number("+")'></td>
+        </tr>        
+        <tr>
+            <td><input class = "common num" type="button" value="0" onclick='Number("0")'></td>
+            <td><input class = "common num" type="button" value="." onclick='Number(".")'></td>
+            <td><input class = "common num" type="button" value="=" id='equals'></td>
+            
+        </tr>
+    </table>
+
+
+
+
+</div>
+</div>
+</form>
